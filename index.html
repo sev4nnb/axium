@@ -1,4 +1,49 @@
+Pour adapter un site web afin qu'il change en fonction de l'appareil utilisé (téléphone ou PC), vous pouvez utiliser les Media Queries en CSS. Voici un exemple simple pour vous guider :
+
+Exemple de code HTML et CSS :
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Responsive</title>
+  <style>
+    /* Styles par défaut (pour les grands écrans comme les PC) */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #8b2923;
+      color: #8b2923;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      border: 2px solid #8b2923;
+      padding: 20px;
+      background-color: #f6ddb6;
+    }
+
+    /* Styles spécifiques pour les petits écrans (comme les téléphones) */
+    @media (max-width: 768px) {
+      body {
+        background-color: #8b2923;
+        color: #f6ddb6;
+      }
+
+      .container {
+        border-color: #f6ddb6;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  </div>
+</body>
+</html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -96,7 +141,7 @@ footer { text-align: center; padding: 20px; background: #111; color: #f6ddb6; fo
 
 <!-- HEADER -->
 <header>
-<img src="https://raw.githubusercontent.com/sev4nnb/axium/main/logorm.png" alt="Axium Logo">
+<img src="https://raw.githubusercontent.com/sev4nnb/axium/main/logo.png.jpg" alt="Axium Logo">
 <nav>
 <ul>
 <li><a href="#hero">Accueil</a></li>
@@ -172,4 +217,3 @@ footer { text-align: center; padding: 20px; background: #111; color: #f6ddb6; fo
 
 </body>
 </html>
-
