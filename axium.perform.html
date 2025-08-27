@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axium.Perform</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #111; background: #f6ddb6; scroll-behavior: smooth; }
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* HEADER */
+header {
+position: fixed;
+top: 0; left: 0; width: 100%;
+background: #8b2923;
+padding: 15px 40px;
+display: flex; justify-content: space-between; align-items: center;
+z-index: 1000;
+}
+header img { height: 80px; }
+nav ul { display: flex; gap: 20px; }
+nav a { color: #f6ddb6; font-weight: 600; transition: 0.3s; }
+nav a:hover { color: #8b2923; }
+
+/* HERO */
+.hero {
+height: 100vh;
+background: url('7A0B0088-0823-4A7D-9D57-033565AA5598.jpeg') no-repeat center center/cover;
+display: flex; flex-direction: column; justify-content: center; align-items: center;
+text-align: center; color:#8b2923; padding: 0 20px;
+}
+.hero img { max-width: 400px; margin-bottom: 20px; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; }
+.btn {
+display: inline-block; background: #8b2923; color:#f6ddb6; padding: 12px 28px;
+border-radius: 30px; font-weight: 600; transition: 0.3s;
+}
+.btn:hover { background: #8b2923; transform: scale(1.05); }
+
+/* SECTION TITLES */
+section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #222; }
+
+/* ABOUT */
+.about-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px; text-align: center;
+}
+.about-grid div { padding: 20px; border: 1px solid #f6ddb6; border-radius: 10px; transition: 0.3s; }
+.about-grid div:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.about-grid img { width: 60px; margin-bottom: 15px; }
+
+/* GALLERY */
+.gallery {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+}
+.gallery img {
+width: 100%; border-radius: 10px; transition: 0.3s; cursor: pointer;
+}
+.gallery img:hover { transform: scale(1.05); }
+
+/* CONTACT */
+.contact-form {
+max-width: 600px; margin: auto;
+}
+.contact-form input, .contact-form textarea {
+width: 100%; padding: 15px; margin-bottom: 15px;
+border: 1px solid #f6ddb6; border-radius: 8px; font-size: 1rem;
+}
+.contact-form button {
+width: 100%; padding: 15px; background: #8b2923; color: #f6ddb6;
+font-weight: 600; border: none; border-radius: 8px; cursor: pointer;
+transition: 0.3s;
+}
+.contact-form button:hover { background: #8b2923; }
+
+.social { text-align: center; margin-top: 20px; }
+.social a { margin: 0 10px; font-size: 1.2rem; color: #8b2923; font-weight: 600; }
+
+/* FOOTER */
+footer { text-align: center; padding: 20px; background: #111; color: #f6ddb6; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<img src="https://github.com/sev4nnb/axium/blob/1bd16a2604c19d9cb952fe85eadf7eeb4bea9113/logo.png.jpg" alt="Axium Logo">
+<nav>
+<ul>
+<li><a href="#hero">Accueil</a></li>
+<li><a href="#about">À propos</a></li>
+<li><a href="#gallery">Galerie</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<img src="https://github.com/sev4nnb/axium/blob/1bd16a2604c19d9cb952fe85eadf7eeb4bea9113/logo_base.png.png" alt="Axium Logo Large">
+<h1>Libère ton potentiel avec Axium</h1>
+<a href="#contact" class="btn">Nous Contacter</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>Ce que nous proposons</h2>
+<div class="about-grid">
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Préparation physique">
+<h3>Préparation physique</h3>
+<p>Des programmes adaptés à ton sport et à ton niveau pour performer.</p>
+</div>
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Suivi médical">
+<h3>Suivi médical & réathlétisation</h3>
+<p>Accompagnement professionnel pour revenir plus fort après une blessure.</p>
+</div>
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135765.png" alt="Programme personnalisé">
+<h3>Programme personnalisé</h3>
+<p>Un suivi sur-mesure, construit selon tes besoins et objectifs.</p>
+</div>
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/1077/1077976.png" alt="Objectifs">
+<h3>Objectifs personnalisés</h3>
+<p>Nous t’aidons à définir et atteindre tes propres objectifs sportifs.</p>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<div class="gallery">
+<img src="https://github.com/sev4nnb/axium/blob/1bd16a2604c19d9cb952fe85eadf7eeb4bea9113/galerie.png.png" alt="Photo training">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <form class="contact-form" action="https://formsubmit.co/axium.perform@gmail.com" method="POST">
+    <input type="text" name="Nom" placeholder="Nom" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <div class="social">
+    <p>Suivez-nous sur :</p>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+© 2025 Axium.Perform – Coaching & Performance
+</footer>
+
+</body>
+</html>
