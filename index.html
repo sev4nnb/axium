@@ -144,15 +144,35 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
+    /* MODIFICATION CSS : Ajout de 'select' pour le style */
     .contact-form input,
-    .contact-form textarea {
+    .contact-form textarea,
+    .contact-form select {
       width: 100%;
       padding: 15px;
       margin-bottom: 15px;
       border: 1px solid #d0e7f0;
       border-radius: 8px;
       font-size: 1rem;
+      font-family: 'Montserrat', sans-serif; /* Consistance du style */
+      background-color: white; /* Consistance du style */
     }
+
+    /* AJOUT CSS : Style pour les labels et le champ désactivé */
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+
+    .contact-form select:disabled {
+      background-color: #f4f4f4;
+      cursor: not-allowed;
+    }
+    /* FIN AJOUT CSS */
+
 
     .contact-form button {
       width: 100%;
@@ -201,7 +221,6 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="https://raw.githubusercontent.com/sev4nnb/axium/main/logo.png.jpg" alt="Axium Logo">
   <nav>
@@ -213,14 +232,12 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="hero">
   <img src="https://raw.githubusercontent.com/sev4nnb/axium/main/logo_base.png.png" alt="Axium Logo Large">
   <h1>Libère ton potentiel avec Axium</h1>
   <a href="#contact" class="btn">Nous Contacter</a>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <h2>Ce que nous proposons</h2>
   <div class="about-grid">
@@ -247,13 +264,26 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <form class="contact-form" action="https://formsubmit.co/axium.perform@gmail.com" method="POST">
     <input type="text" name="Nom" placeholder="Nom" required>
     <input type="email" name="Email" placeholder="Email" required>
-    <textarea name="Message" rows="5" placeholder="Message" required></textarea>
+
+    <label for="rdv-jour">Proposer un créneau (Optionnel)</label>
+    <select id="rdv-jour" name="Jour_Rendez_vous">
+      <option value="">-- Choisir un jour --</option>
+      <option value="Lundi">Lundi</option>
+      <option value="Mercredi">Mercredi</option>
+      <option value="Jeudi">Jeudi</option>
+      <option value="Vendredi">Vendredi</option>
+    </select>
+    
+    <label for="rdv-heure">Heure du rendez-vous</label>
+    <select id="rdv-heure" name="Heure_Rendez_vous" disabled>
+      <option value="">-- Veuillez d'abord choisir un jour --</option>
+    </select>
+    <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
     <button type="submit">Envoyer</button>
   </form>
   <div class="social">
@@ -262,10 +292,55 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2025 Axium.Perform – Coaching & Performance
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // 1. Définir les créneaux horaires disponibles
+  // (Basé sur des créneaux de 30 min)
+  const availableTimes = {
+    "Lundi": ["19:00", "19:30"], // 19h à 20h
+    "Mercredi": ["19:00", "19:30"], // 19h à 20h
+    "Jeudi": ["18:30", "19:00", "19:30"], // 18h30 à 20h
+    "Vendredi": ["18:30", "19:00", "19:30"] // 18h30 à 20h
+  };
+
+  // 2. Récupérer les éléments du formulaire
+  const daySelect = document.getElementById('rdv-jour');
+  const timeSelect = document.getElementById('rdv-heure');
+
+  // 3. Écouter les changements sur le sélecteur de jour
+  daySelect.addEventListener('change', function() {
+    const selectedDay = this.value;
+    const times = availableTimes[selectedDay];
+
+    // 4. Vider l'ancien sélecteur d'heure
+    timeSelect.innerHTML = ''; 
+
+    if (times && times.length > 0) {
+      // 5. Activer le sélecteur d'heure
+      timeSelect.disabled = false;
+      
+      // Ajouter une option par défaut
+      let defaultOption = new Option('-- Choisir une heure --', '');
+      timeSelect.add(defaultOption);
+
+      // 6. Remplir avec les nouveaux créneaux
+      times.forEach(function(time) {
+        let option = new Option(time, time);
+        timeSelect.add(option);
+      });
+    } else {
+      // 7. Désactiver si aucun jour n'est choisi
+      timeSelect.disabled = true;
+      let defaultOption = new Option('-- Veuillez d'abord choisir un jour --', '');
+      timeSelect.add(defaultOption);
+    }
+  });
+});
+</script>
 </body>
 </html>
