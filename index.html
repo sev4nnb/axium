@@ -133,6 +133,21 @@
       width: 60px;
       margin-bottom: 15px;
     }
+    
+    /* === AJOUT CSS POUR LES TARIFS === */
+    .prix-desc {
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      margin-top: 10px; 
+    }
+    .prix-valeur {
+      font-size: 2rem; 
+      font-weight: 700;
+      color: var(--primary); 
+      margin-top: 15px; 
+    }
+    /* === FIN AJOUT CSS === */
+
 
     /* CONTACT */
     .contact-form {
@@ -144,7 +159,6 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
-    /* MODIFICATION CSS : Ajout de 'select' pour le style */
     .contact-form input,
     .contact-form textarea,
     .contact-form select {
@@ -154,11 +168,10 @@
       border: 1px solid #d0e7f0;
       border-radius: 8px;
       font-size: 1rem;
-      font-family: 'Montserrat', sans-serif; /* Consistance du style */
-      background-color: white; /* Consistance du style */
+      font-family: 'Montserrat', sans-serif; 
+      background-color: white; 
     }
 
-    /* AJOUT CSS : Style pour les labels et le champ désactivé */
     .contact-form label {
       display: block;
       margin-bottom: 5px;
@@ -171,8 +184,6 @@
       background-color: #f4f4f4;
       cursor: not-allowed;
     }
-    /* FIN AJOUT CSS */
-
 
     .contact-form button {
       width: 100%;
@@ -227,6 +238,7 @@
     <ul>
       <li><a href="#hero">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -264,6 +276,23 @@
   </div>
 </section>
 
+<section id="tarifs">
+  <h2>Nos Tarifs</h2>
+  <div class="about-grid">
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/3202/3202167.png" alt="Massage sportif">
+      <h3>Massage Sportif</h3>
+      <p class="prix-desc">Séance de 30 minutes</p>
+      <div class="prix-valeur">60.-</div>
+    </div>
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/2545/2545464.png" alt="Préparation physique">
+      <h3>Préparation Physique</h3>
+      <p class="prix-desc">Programme sur-mesure</p>
+      <div class="prix-valeur">Sur demande</div>
+    </div>
+  </div>
+</section>
 <section id="contact">
   <h2>Contact</h2>
   <form class="contact-form" action="https://formsubmit.co/axium.perform@gmail.com" method="POST">
@@ -283,6 +312,7 @@
     <select id="rdv-heure" name="Heure_Rendez_vous" disabled>
       <option value="">-- Veuillez d'abord choisir un jour --</option>
     </select>
+
     <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
     <button type="submit">Envoyer</button>
   </form>
@@ -299,42 +329,32 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   
-  // 1. Définir les créneaux horaires disponibles
-  // (Basé sur des créneaux de 30 min)
   const availableTimes = {
-    "Lundi": ["19:00", "19:30"], // 19h à 20h
-    "Mercredi": ["19:00", "19:30"], // 19h à 20h
-    "Jeudi": ["18:30", "19:00", "19:30"], // 18h30 à 20h
-    "Vendredi": ["18:30", "19:00", "19:30"] // 18h30 à 20h
+    "Lundi": ["19:00", "19:30"],
+    "Mercredi": ["19:00", "19:30"],
+    "Jeudi": ["18:30", "19:00", "19:30"],
+    "Vendredi": ["18:30", "19:00", "19:30"]
   };
 
-  // 2. Récupérer les éléments du formulaire
   const daySelect = document.getElementById('rdv-jour');
   const timeSelect = document.getElementById('rdv-heure');
 
-  // 3. Écouter les changements sur le sélecteur de jour
   daySelect.addEventListener('change', function() {
     const selectedDay = this.value;
     const times = availableTimes[selectedDay];
 
-    // 4. Vider l'ancien sélecteur d'heure
     timeSelect.innerHTML = ''; 
 
     if (times && times.length > 0) {
-      // 5. Activer le sélecteur d'heure
       timeSelect.disabled = false;
-      
-      // Ajouter une option par défaut
       let defaultOption = new Option('-- Choisir une heure --', '');
       timeSelect.add(defaultOption);
 
-      // 6. Remplir avec les nouveaux créneaux
       times.forEach(function(time) {
         let option = new Option(time, time);
         timeSelect.add(option);
       });
     } else {
-      // 7. Désactiver si aucun jour n'est choisi
       timeSelect.disabled = true;
       let defaultOption = new Option('-- Veuillez d'abord choisir un jour --', '');
       timeSelect.add(defaultOption);
@@ -342,5 +362,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
 </body>
 </html>
