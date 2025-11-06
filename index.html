@@ -13,7 +13,6 @@
       --dark: #0A1F33;        /* Bleu très foncé pour contraste */
     }
 
-    /* RESET */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
@@ -38,9 +37,7 @@
 
     header img { height: 70px; }
 
-    nav ul {
-      display: flex; gap: 25px;
-    }
+    nav ul { display: flex; gap: 25px; }
 
     nav a {
       color: white;
@@ -55,10 +52,6 @@
       color: var(--dark);
     }
 
-    @media (max-width: 768px) {
-      nav ul { flex-direction: column; align-items: flex-start; gap: 10px; }
-    }
-
     /* HERO */
     .hero {
       height: 100vh;
@@ -67,10 +60,7 @@
       text-align: center; color: var(--dark); padding: 0 20px;
     }
 
-    .hero img {
-      max-width: 300px;
-      margin-bottom: 30px;
-    }
+    .hero img { max-width: 300px; margin-bottom: 30px; }
 
     .hero h1 {
       font-size: 2.4rem;
@@ -108,7 +98,7 @@
       color: var(--primary);
     }
 
-    /* ABOUT GRID */
+    /* GRID */
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -133,21 +123,19 @@
       width: 60px;
       margin-bottom: 15px;
     }
-    
-    /* === AJOUT CSS POUR LES TARIFS === */
+
     .prix-desc {
       font-size: 0.95rem;
       color: #4a4a4a;
       margin-top: 10px; 
     }
+
     .prix-valeur {
       font-size: 2rem; 
       font-weight: 700;
       color: var(--primary); 
       margin-top: 15px; 
     }
-    /* === FIN AJOUT CSS === */
-
 
     /* CONTACT */
     .contact-form {
@@ -160,8 +148,7 @@
     }
 
     .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
+    .contact-form textarea {
       width: 100%;
       padding: 15px;
       margin-bottom: 15px;
@@ -178,11 +165,6 @@
       font-weight: 600;
       font-size: 0.9rem;
       color: var(--dark);
-    }
-
-    .contact-form select:disabled {
-      background-color: #f4f4f4;
-      cursor: not-allowed;
     }
 
     .contact-form button {
@@ -219,7 +201,6 @@
       color: var(--secondary);
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 25px;
@@ -254,22 +235,22 @@
   <h2>Ce que nous proposons</h2>
   <div class="about-grid">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Préparation physique">
+      <img src="https://cdn-icons-png.flaticon.com/512/808/808436.png" alt="Préparation physique">
       <h3>Préparation physique</h3>
       <p>Des programmes adaptés à ton sport et à ton niveau pour performer.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Suivi médical">
+      <img src="https://cdn-icons-png.flaticon.com/512/2833/2833189.png" alt="Suivi médical">
       <h3>Suivi médical & réathlétisation</h3>
       <p>Accompagnement professionnel pour revenir plus fort après une blessure.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135765.png" alt="Programme personnalisé">
+      <img src="https://cdn-icons-png.flaticon.com/512/4206/4206233.png" alt="Programme personnalisé">
       <h3>Programme personnalisé</h3>
       <p>Un suivi sur-mesure, construit selon tes besoins et objectifs.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077976.png" alt="Objectifs">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Objectifs">
       <h3>Objectifs personnalisés</h3>
       <p>Nous t’aidons à définir et atteindre tes propres objectifs sportifs.</p>
     </div>
@@ -280,39 +261,25 @@
   <h2>Nos Tarifs</h2>
   <div class="about-grid">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/3202/3202167.png" alt="Massage sportif">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Massage sportif">
       <h3>Massage Sportif</h3>
       <p class="prix-desc">Séance de 30 minutes</p>
       <div class="prix-valeur">60.-</div>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2545/2545464.png" alt="Préparation physique">
+      <img src="https://cdn-icons-png.flaticon.com/512/1260/1260833.png" alt="Préparation physique">
       <h3>Préparation Physique</h3>
       <p class="prix-desc">Programme sur-mesure</p>
       <div class="prix-valeur">Sur demande</div>
     </div>
   </div>
 </section>
+
 <section id="contact">
   <h2>Contact</h2>
   <form class="contact-form" action="https://formsubmit.co/axium.perform@gmail.com" method="POST">
     <input type="text" name="Nom" placeholder="Nom" required>
     <input type="email" name="Email" placeholder="Email" required>
-
-    <label for="rdv-jour">Proposer un créneau (Optionnel)</label>
-    <select id="rdv-jour" name="Jour_Rendez_vous">
-      <option value="">-- Choisir un jour --</option>
-      <option value="Lundi">Lundi</option>
-      <option value="Mercredi">Mercredi</option>
-      <option value="Jeudi">Jeudi</option>
-      <option value="Vendredi">Vendredi</option>
-    </select>
-    
-    <label for="rdv-heure">Heure du rendez-vous</label>
-    <select id="rdv-heure" name="Heure_Rendez_vous" disabled>
-      <option value="">-- Veuillez d'abord choisir un jour --</option>
-    </select>
-
     <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
     <button type="submit">Envoyer</button>
   </form>
@@ -325,43 +292,6 @@
 <footer>
   © 2025 Axium.Perform – Coaching & Performance
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  
-  const availableTimes = {
-    "Lundi": ["19:00", "19:30"],
-    "Mercredi": ["19:00", "19:30"],
-    "Jeudi": ["18:30", "19:00", "19:30"],
-    "Vendredi": ["18:30", "19:00", "19:30"]
-  };
-
-  const daySelect = document.getElementById('rdv-jour');
-  const timeSelect = document.getElementById('rdv-heure');
-
-  daySelect.addEventListener('change', function() {
-    const selectedDay = this.value;
-    const times = availableTimes[selectedDay];
-
-    timeSelect.innerHTML = ''; 
-
-    if (times && times.length > 0) {
-      timeSelect.disabled = false;
-      let defaultOption = new Option('-- Choisir une heure --', '');
-      timeSelect.add(defaultOption);
-
-      times.forEach(function(time) {
-        let option = new Option(time, time);
-        timeSelect.add(option);
-      });
-    } else {
-      timeSelect.disabled = true;
-      let defaultOption = new Option('-- Veuillez d'abord choisir un jour --', '');
-      timeSelect.add(defaultOption);
-    }
-  });
-});
-</script>
 
 </body>
 </html>
