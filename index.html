@@ -7,19 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0076B6;     /* Bleu profond du logo */
-      --secondary: #4DD0E1;   /* Bleu turquoise clair */
-      --background: #F5FAFF;  /* Blanc bleuté pour douceur */
-      --dark: #0A1F33;        /* Bleu très foncé pour contraste */
+      --primary: #0076B6;     /* Bleu principal dynamique */
+      --secondary: #00C6D7;   /* Turquoise accent sportif */
+      --background: #FFFFFF;  /* Blanc pur */
+      --text-dark: #0A1F33;   /* Texte contrasté */
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
-      color: var(--dark);
       background: var(--background);
-      scroll-behavior: smooth;
+      color: var(--text-dark);
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     a { text-decoration: none; color: inherit; }
@@ -28,11 +28,11 @@
     /* HEADER */
     header {
       position: fixed; top: 0; left: 0; width: 100%;
-      background: var(--dark);
+      background: var(--background);
+      border-bottom: 2px solid var(--primary);
       padding: 15px 40px;
       display: flex; justify-content: space-between; align-items: center;
       z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     }
 
     header img { height: 70px; }
@@ -40,7 +40,7 @@
     nav ul { display: flex; gap: 25px; }
 
     nav a {
-      color: white;
+      color: var(--text-dark);
       font-weight: 600;
       transition: 0.3s;
       padding: 8px 14px;
@@ -48,16 +48,18 @@
     }
 
     nav a:hover {
-      background: var(--secondary);
-      color: var(--dark);
+      background: var(--primary);
+      color: white;
     }
 
     /* HERO */
     .hero {
       height: 100vh;
-      background: linear-gradient(to bottom right, var(--secondary), #E0F7FA);
       display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center; color: var(--dark); padding: 0 20px;
+      text-align: center;
+      padding: 0 20px;
+      color: var(--text-dark);
+      background: var(--background);
     }
 
     .hero img { max-width: 300px; margin-bottom: 30px; }
@@ -80,11 +82,11 @@
 
     .btn:hover {
       background: var(--secondary);
-      color: var(--dark);
+      color: var(--text-dark);
       transform: scale(1.05);
     }
 
-    /* SECTIONS */
+    /* SECTION GÉNÉRALE */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -110,13 +112,13 @@
       background: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       transition: 0.3s;
     }
 
     .about-grid div:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
     }
 
     .about-grid img {
@@ -155,16 +157,7 @@
       border: 1px solid #d0e7f0;
       border-radius: 8px;
       font-size: 1rem;
-      font-family: 'Montserrat', sans-serif; 
-      background-color: white; 
-    }
-
-    .contact-form label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--dark);
+      background-color: white;
     }
 
     .contact-form button {
@@ -181,7 +174,7 @@
 
     .contact-form button:hover {
       background: var(--secondary);
-      color: var(--dark);
+      color: var(--text-dark);
     }
 
     .social {
@@ -197,14 +190,12 @@
       transition: 0.3s;
     }
 
-    .social a:hover {
-      color: var(--secondary);
-    }
+    .social a:hover { color: var(--secondary); }
 
     footer {
       text-align: center;
       padding: 25px;
-      background: var(--dark);
+      background: var(--primary);
       color: white;
       font-size: 0.9rem;
     }
@@ -235,24 +226,24 @@
   <h2>Ce que nous proposons</h2>
   <div class="about-grid">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/808/808436.png" alt="Préparation physique">
+      <img src="https://cdn-icons-png.flaticon.com/512/2972/2972048.png" alt="Préparation physique">
       <h3>Préparation physique</h3>
-      <p>Des programmes adaptés à ton sport et à ton niveau pour performer.</p>
+      <p>Programmes sur mesure pour améliorer tes performances et atteindre tes objectifs.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2833/2833189.png" alt="Suivi médical">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Réathlétisation">
       <h3>Suivi médical & réathlétisation</h3>
-      <p>Accompagnement professionnel pour revenir plus fort après une blessure.</p>
+      <p>Reviens plus fort après une blessure grâce à un accompagnement professionnel.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/4206/4206233.png" alt="Programme personnalisé">
+      <img src="https://cdn-icons-png.flaticon.com/512/4561/4561122.png" alt="Programme personnalisé">
       <h3>Programme personnalisé</h3>
-      <p>Un suivi sur-mesure, construit selon tes besoins et objectifs.</p>
+      <p>Un suivi complet adapté à ton rythme et à tes besoins spécifiques.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Objectifs">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Objectifs">
       <h3>Objectifs personnalisés</h3>
-      <p>Nous t’aidons à définir et atteindre tes propres objectifs sportifs.</p>
+      <p>Définis et atteins tes objectifs sportifs avec une méthode structurée et motivante.</p>
     </div>
   </div>
 </section>
@@ -261,13 +252,13 @@
   <h2>Nos Tarifs</h2>
   <div class="about-grid">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Massage sportif">
+      <img src="https://cdn-icons-png.flaticon.com/512/3094/3094849.png" alt="Massage sportif">
       <h3>Massage Sportif</h3>
       <p class="prix-desc">Séance de 30 minutes</p>
       <div class="prix-valeur">60.-</div>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/1260/1260833.png" alt="Préparation physique">
+      <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Préparation Physique">
       <h3>Préparation Physique</h3>
       <p class="prix-desc">Programme sur-mesure</p>
       <div class="prix-valeur">Sur demande</div>
