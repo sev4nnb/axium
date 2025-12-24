@@ -1,3 +1,13 @@
+Voici le code complet mis à jour.
+
+**Modifications effectuées :**
+
+1. **Section Services (`#about`)** : J'ai supprimé le titre "Ce que nous proposons" (la balise `<h2>` est retirée). J'ai remplacé tout l'ancien contenu (préparation physique, etc.) par les 3 éléments demandés : **Massage Sportif**, **Massage Relaxation** et **Massage Technique Hijama**, avec des icônes adaptées pour chacun.
+2. **Section Tarifs (`#tarifs`)** : J'ai retiré la "Préparation physique" et ajouté le tarif pour le **Massage Relaxation (1h - 100 CHF)**.
+
+Copie et colle ce code dans ton fichier :
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -122,7 +132,7 @@
     }
 
     .about-grid img {
-      width: 60px;
+      width: 70px; /* Légèrement agrandi pour les nouveaux logos */
       margin-bottom: 15px;
     }
 
@@ -209,7 +219,7 @@
   <nav>
     <ul>
       <li><a href="#hero">Accueil</a></li>
-      <li><a href="#about">À propos</a></li>
+      <li><a href="#about">Services</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -223,27 +233,21 @@
 </section>
 
 <section id="about">
-  <h2>Ce que nous proposons</h2>
   <div class="about-grid">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2972/2972048.png" alt="Préparation physique">
-      <h3>Préparation physique</h3>
-      <p>Programmes sur mesure pour améliorer tes performances et atteindre tes objectifs.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/2548/2548530.png" alt="Massage Sportif">
+      <h3>Massage Sportif</h3>
+      <p>Récupération musculaire et amélioration de la performance.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Réathlétisation">
-      <h3>Suivi médical & réathlétisation</h3>
-      <p>Reviens plus fort après une blessure grâce à un accompagnement professionnel.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3757/3757045.png" alt="Massage Relaxation">
+      <h3>Massage Relaxation</h3>
+      <p>Détente profonde pour évacuer le stress et les tensions.</p>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/4561/4561122.png" alt="Programme personnalisé">
-      <h3>Programme personnalisé</h3>
-      <p>Un suivi complet adapté à ton rythme et à tes besoins spécifiques.</p>
-    </div>
-    <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Objectifs">
-      <h3>Objectifs personnalisés</h3>
-      <p>Définis et atteins tes objectifs sportifs avec une méthode structurée et motivante.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/2808/2808388.png" alt="Hijama">
+      <h3>Massage Technique Hijama</h3>
+      <p>Thérapie par ventouses pour stimuler la circulation et la récupération.</p>
     </div>
   </div>
 </section>
@@ -258,10 +262,10 @@
       <div class="prix-valeur">60.-</div>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Préparation Physique">
-      <h3>Préparation Physique</h3>
-      <p class="prix-desc">Programme sur-mesure</p>
-      <div class="prix-valeur">Sur demande</div>
+      <img src="https://cdn-icons-png.flaticon.com/512/2647/2647597.png" alt="Massage Relaxation">
+      <h3>Massage Relaxation</h3>
+      <p class="prix-desc">Séance de 1 heure</p>
+      <div class="prix-valeur">100.-</div>
     </div>
   </div>
 </section>
@@ -286,3 +290,5 @@
 
 </body>
 </html>
+
+```
