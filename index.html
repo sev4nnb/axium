@@ -55,6 +55,7 @@
       height: 100vh;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
       text-align: center;
+      padding: 0 20px;
     }
 
     .hero img { max-width: 300px; margin-bottom: 30px; }
@@ -132,77 +133,6 @@
       margin-top: 15px;
     }
 
-    /* CONTACT - Mise en page améliorée */
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .contact-row {
-      display: flex;
-      gap: 15px;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .contact-row input {
-      flex: 1;
-      padding: 14px;
-      border: 2px solid var(--primary);
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    .contact-row textarea {
-      flex: 2;
-      padding: 14px;
-      border: 2px solid var(--primary);
-      border-radius: 8px;
-      font-size: 1rem;
-      height: 120px;
-      resize: none;
-    }
-
-    .contact-row button {
-      padding: 14px 22px;
-      background: var(--primary);
-      color: white;
-      font-weight: 700;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .contact-row button:hover {
-      background: var(--secondary);
-      color: var(--text-dark);
-      transform: scale(1.05);
-    }
-
-    .social {
-      text-align: center;
-      margin-top: 20px;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    .social a {
-      color: var(--primary);
-      margin-top: 8px;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .social a:hover {
-      color: var(--secondary);
-      transform: scale(1.05);
-    }
-
     footer {
       text-align: center;
       padding: 25px;
@@ -237,11 +167,46 @@
   <div class="about-grid">
 
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/3043/3043214.png" alt="Massage sportif">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Massage sportif">
       <h3>Massage Sportif</h3>
       <p class="prix-desc">Séance de 30 minutes</p>
       <div class="prix-valeur">60 CHF</div>
     </div>
 
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Massage relaxation">
+      <h3>Massage Relaxation</h3>
+      <p class="prix-desc">Séance de 1 heure</p>
+      <div class="prix-valeur">100 CHF</div>
+    </div>
+
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Hijama">
+      <h3>Soins Hijama</h3>
+      <p class="prix-desc">Pratiqué dans toutes les séances (30 min ou 1h), selon les besoins</p>
+      <p style="font-size:0.9rem; margin-top:10px;">Drainage, récupération, et soin tendineux/musculaire</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form class="contact-form" action="https://formsubmit.co/axium.perform@gmail.com" method="POST">
+    <input type="text" name="Nom" placeholder="Nom" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+  <div class="social">
+    <p>Suivez-nous sur :</p>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Axium.Perform – Coaching & Performance
+</footer>
+
+</body>
+</html>
