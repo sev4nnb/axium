@@ -1,5 +1,3 @@
-Code principale
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,10 +7,10 @@ Code principale
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0076B6;     /* Bleu principal dynamique */
-      --secondary: #00C6D7;   /* Turquoise accent sportif */
-      --background: #FFFFFF;  /* Blanc pur */
-      --text-dark: #0A1F33;   /* Texte contrasté */
+      --primary: #0076B6;
+      --secondary: #00C6D7;
+      --background: #FFFFFF;
+      --text-dark: #0A1F33;
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,7 +25,6 @@ Code principale
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    /* HEADER */
     header {
       position: fixed; top: 0; left: 0; width: 100%;
       background: var(--background);
@@ -37,7 +34,10 @@ Code principale
       z-index: 1000;
     }
 
-    header img { height: 70px; }
+    header img {
+      height: 70px;
+      margin-left: -15px;
+    }
 
     nav ul { display: flex; gap: 25px; }
 
@@ -54,7 +54,6 @@ Code principale
       color: white;
     }
 
-    /* HERO */
     .hero {
       height: 100vh;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -88,7 +87,6 @@ Code principale
       transform: scale(1.05);
     }
 
-    /* SECTION GÉNÉRALE */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -102,7 +100,6 @@ Code principale
       color: var(--primary);
     }
 
-    /* GRID */
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -131,17 +128,16 @@ Code principale
     .prix-desc {
       font-size: 0.95rem;
       color: #4a4a4a;
-      margin-top: 10px; 
+      margin-top: 10px;
     }
 
     .prix-valeur {
-      font-size: 2rem; 
+      font-size: 2rem;
       font-weight: 700;
-      color: var(--primary); 
-      margin-top: 15px; 
+      color: var(--primary);
+      margin-top: 15px;
     }
 
-    /* CONTACT */
     .contact-form {
       max-width: 600px;
       margin: auto;
@@ -228,20 +224,20 @@ Code principale
   <h2>Ce que nous proposons</h2>
   <div class="about-grid">
     <div>
-      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDFlZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1kdW1iYmVsbC1pY29uIGx1Y2lkZS1kdW1iYmVsbCI+PHBhdGggZD0iTTE3LjU5NiAxMi43NjhhMiAyIDAgMSAwIDIuODI5LTIuODI5bC0xLjc2OC0xLjc2N2EyIDIgMCAwIDAgMi44MjgtMi44MjlsLTIuODI4LTIuODI4YTIgMiAwIDAgMC0yLjgyOSAyLjgyOGwtMS43NjctMS43NjhhMiAyIDAgMSAwLTIuODI5IDIuODI5eiIvPjxwYXRoIGQ9Im0yLjUgMjEuNSAxLjQtMS40Ii8+PHBhdGggZD0ibTIwLjEgMy45IDEuNC0xLjQiLz48cGF0aCBkPSJNNS4zNDMgMjEuNDg1YTIgMiAwIDEgMCAyLjgyOS0yLjgyOGwxLjc2NyAxLjc2OGEyIDIgMCAxIDAgMi44MjktMi44MjlsLTYuMzY0LTYuMzY0YTIgMiAwIDEgMC0yLjgyOSAyLjgyOWwxLjc2OCAxLjc2N2EyIDIgMCAwIDAtMi44MjggMi44Mjl6Ii8+PHBhdGggZD0ibTkuNiAxNC40IDQuOC00LjgiLz48L3N2Zz4=" alt="Massage sportif">
+      <img src="https://lucide.dev/icons/dumbbell.svg" alt="Massage sportif">
       <h3>Massage sportif</h3>
       <p>Massage visant à relâcher les tensions musculaires, améliorer la circulation, accélérer la récupération et optimiser la performance après l’effort. Adapté aux athlètes et aux entraînements intenses.</p>
     </div>
     <div>
-      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1MWEwMjciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sZWFmLWljb24gbHVjaWRlLWxlYWYiPjxwYXRoIGQ9Ik0xMSAyMEE3IDcgMCAwIDEgOS44IDYuMUMxNS41IDUgMTcgNC40OCAxOSAyYzEgMiAyIDQuMTggMiA4IDAgNS41LTQuNzggMTAtMTAgMTBaIi8+PHBhdGggZD0iTTIgMjFjMC0zIDEuODUtNS4zNiA1LjA4LTZDOS41IDE0LjUyIDEyIDEzIDEzIDEyIi8+PC9zdmc+" alt="Soin Détente">
-      <h3>Soin Détente</h3>
-      <p>Séance apaisante conçue pour réduire le stress, détendre le corps et l’esprit, relâcher les tensions et favoriser un profond bien-être. Idéal pour un moment de calme et de récupération globale.</p>
+      <img src="https://lucide.dev/icons/leaf.svg" alt="Soin détente">
+      <h3>Soin détente</h3>
+      <p>Séance apaisante conçue pour réduire le stress, détendre le corps et l’esprit, relâcher les tensions et favoriser un profond bien-être. Idéal pour une récupération globale.</p>
     </div>
     <div>
-      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlNTNlM2UiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1oZWFydC1oYW5kc2hha2UtaWNvbiBsdWNpZGUtaGVhcnQtaGFuZHNoYWtlIj48cGF0aCBkPSJNMTkuNDE0IDE0LjQxNEMyMSAxMi44MjggMjIgMTEuNSAyMiA5LjVhNS41IDUuNSAwIDAgMC05LjU5MS0zLjY3Ni42LjYgMCAwIDEtLjgxOC4wMDFBNS41IDUuNSAwIDAgMCAyIDkuNWMwIDIuMyAxLjUgNCAzIDUuNWw1LjUzNSA1LjM2MmEyIDIgMCAwIDAgMi44NzkuMDUyIDIuMTIgMi4xMiAwIDAgMC0uMDA0LTMgMi4xMjQgMi4xMjQgMCAxIDAgMy0zIDIuMTI0IDIuMTI0IDAgMCAwIDMuMDA0IDAgMiAyIDAgMCAwIDAtMi44MjhsLTEuODgxLTEuODgyYTIuNDEgMi40MSAwIDAgMC0zLjQwOSAwbC0xLjcxIDEuNzFhMiAyIDAgMCAxLTIuODI4IDAgMiAyIDAgMCAxIDAtMi44MjhsMi44MjMtMi43NjIiLz48L3N2Zz4=" alt="Hijama">
-      <h3>Hijama</h3>
-      <p>Pratiqué dans toutes les séances (30 min ou 1h), selon les besoins.</p>
-    </div>
+      <img src="https://lucide.dev/icons/droplet.svg" alt="Hijama">
+      <h3>Hijama</h3>
+      <p>Pratiqué dans toutes les séances (30 min ou 1h), selon les besoins.</p>
+    </div>
   </div>
 </section>
 
@@ -249,14 +245,14 @@ Code principale
   <h2>Nos Tarifs</h2>
   <div class="about-grid">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Massage sportif">
+      <img src="https://lucide.dev/icons/activity.svg" alt="Massage sportif tarif">
       <h3>Massage Sportif</h3>
       <p class="prix-desc">Séance de 30 minutes</p>
       <div class="prix-valeur">60.-</div>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Soin Détente">
-      <h3>Massage relaxation</h3>
+      <img src="https://lucide.dev/icons/heart-handshake.svg" alt="Soin détente tarif">
+      <h3>Soin détente</h3>
       <p class="prix-desc">Séance de 1 heure</p>
       <div class="prix-valeur">100 CHF</div>
     </div>
@@ -273,7 +269,7 @@ Code principale
   </form>
   <div class="social">
     <p>Suivez-nous sur :</p>
-    <a href="https://www.instagram.com/axium.perform/" target="_blank">Instagram</a>
+    <a target="_blank">Instagram</a>
   </div>
 </section>
 
