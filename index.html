@@ -7,67 +7,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0076B6;
-      --secondary: #00C6D7;
-      --background: #FFFFFF;
-      --text-dark: #0A1F33;
+      --primary: #0076B6;     /* Bleu principal dynamique */
+      --secondary: #00C6D7;   /* Turquoise accent sportif */
+      --background: #FFFFFF;  /* Blanc pur */
+      --text-dark: #0A1F33;   /* Texte contrasté */
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: var(--background);
       color: var(--text-dark);
       line-height: 1.6;
       scroll-behavior: smooth;
-      padding-top: 80px;
     }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
 
     /* HEADER */
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
+      position: fixed; top: 0; left: 0; width: 100%;
       background: var(--background);
       border-bottom: 2px solid var(--primary);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 15px 40px;
+      display: flex; justify-content: space-between; align-items: center;
       z-index: 1000;
     }
 
-    header img {
-      height: 55px;
-      margin-left: -10px;
-    }
+    header img { height: 70px;
+                margin-left: -15px;
+               }
 
-    /* MENU BURGER */
-    .burger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-
-    .burger div {
-      width: 30px;
-      height: 3px;
-      background: var(--primary);
-      border-radius: 3px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 20px;
-    }
+    nav ul { display: flex; gap: 25px; }
 
     nav a {
+      color: var(--text-dark);
       font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
       transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 6px;
     }
 
     nav a:hover {
@@ -77,21 +56,21 @@
 
     /* HERO */
     .hero {
-      height: calc(100vh - 80px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      height: 100vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
       text-align: center;
       padding: 0 20px;
+      color: var(--text-dark);
+      background: var(--background);
     }
 
-    .hero img { width: 220px; margin-bottom: 20px; }
+    .hero img { max-width: 300px; margin-bottom: 30px; }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.4rem;
+      font-weight: 700;
       color: var(--primary);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .btn {
@@ -109,17 +88,17 @@
       transform: scale(1.05);
     }
 
-    /* SECTIONS */
+    /* SECTION GÉNÉRALE */
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
 
     section h2 {
       text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 35px;
+      font-size: 2rem;
+      margin-bottom: 40px;
       color: var(--primary);
     }
 
@@ -133,7 +112,7 @@
 
     .about-grid div {
       background: white;
-      padding: 25px;
+      padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       transition: 0.3s;
@@ -145,45 +124,47 @@
     }
 
     .about-grid img {
-      width: 50px;
-      margin-bottom: 12px;
+      width: 60px;
+      margin-bottom: 15px;
     }
 
     .prix-desc {
-      font-size: 0.9rem;
-      color: #444;
-      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      margin-top: 10px; 
     }
 
     .prix-valeur {
-      font-size: 1.8rem;
+      font-size: 2rem; 
       font-weight: 700;
-      color: var(--primary);
-      margin-top: 12px;
+      color: var(--primary); 
+      margin-top: 15px; 
     }
 
     /* CONTACT */
     .contact-form {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
       max-width: 600px;
       margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
-      padding: 14px;
-      margin-bottom: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
       border: 1px solid #d0e7f0;
       border-radius: 8px;
       font-size: 1rem;
+      background-color: white;
     }
 
     .contact-form button {
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       background: var(--primary);
       color: white;
       font-weight: 600;
@@ -200,14 +181,14 @@
 
     .social {
       text-align: center;
-      margin-top: 18px;
-      font-weight: 600;
+      margin-top: 25px;
     }
 
     .social a {
+      margin: 0 10px;
+      font-size: 1.2rem;
       color: var(--primary);
-      margin: 0 8px;
-      font-size: 1.1rem;
+      font-weight: 600;
       transition: 0.3s;
     }
 
@@ -215,30 +196,10 @@
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       background: var(--primary);
       color: white;
-      font-size: 0.85rem;
-      margin-top: 30px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .burger { display: flex; }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 75px;
-        right: 0;
-        background: white;
-        width: 100%;
-        padding: 20px 0;
-        border-bottom: 2px solid var(--primary);
-      }
-      nav ul.active { display: flex; }
-      nav a { display: block; padding: 12px; text-align: center; }
-      header img { height: 48px; }
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -247,11 +208,8 @@
 
 <header>
   <img src="0B8EB8A2-C0E2-469B-9539-E4B9E5061B41.png" alt="Axium Logo">
-  <div class="burger" onclick="toggleMenu()">
-    <div></div><div></div><div></div>
-  </div>
   <nav>
-    <ul id="nav-links">
+    <ul>
       <li><a href="#hero">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
@@ -270,19 +228,19 @@
   <h2>Ce que nous proposons</h2>
   <div class="about-grid">
     <div>
-      <img src="https://lucide.dev/icons/dumbbell.svg" alt="Massage sportif">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDFlZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1kdW1iYmVsbC1pY29uIGx1Y2lkZS1kdW1iYmVsbCI+PHBhdGggZD0iTTE3LjU5NiAxMi43NjhhMiAyIDAgMSAwIDIuODI5LTIuODI5bC0xLjc2OC0xLjc2N2EyIDIgMCAwIDAgMi44MjgtMi44MjlsLTIuODI4LTIuODI4YTIgMiAwIDAgMC0yLjgyOSAyLjgyOGwtMS43NjctMS43NjhhMiAyIDAgMSAwLTIuODI5IDIuODI5eiIvPjxwYXRoIGQ9Im0yLjUgMjEuNSAxLjQtMS40Ii8+PHBhdGggZD0ibTIwLjEgMy45IDEuNC0xLjQiLz48cGF0aCBkPSJNNS4zNDMgMjEuNDg1YTIgMiAwIDEgMCAyLjgyOS0yLjgyOGwxLjc2NyAxLjc2OGEyIDIgMCAxIDAgMi44MjktMi44MjlsLTYuMzY0LTYuMzY0YTIgMiAwIDEgMC0yLjgyOSAyLjgyOWwxLjc2OCAxLjc2N2EyIDIgMCAwIDAtMi44MjggMi44Mjl6Ii8+PHBhdGggZD0ibTkuNiAxNC40IDQuOC00LjgiLz48L3N2Zz4=" alt="Massage sportif">
       <h3>Massage sportif</h3>
-      <p>Relâche les tensions, améliore la circulation et booste la récupération. Pensé pour les athlètes et efforts intenses.</p>
+      <p>Massage visant à relâcher les tensions musculaires, améliorer la circulation, accélérer la récupération et optimiser la performance après l’effort. Adapté aux athlètes et aux entraînements intenses.</p>
     </div>
     <div>
-      <img src="https://lucide.dev/icons/leaf.svg" alt="Soin détente">
-      <h3>Soin détente</h3>
-      <p>Un soin apaisant pour réduire le stress et relâcher le corps. Idéal pour récupérer mentalement et physiquement.</p>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1MWEwMjciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sZWFmLWljb24gbHVjaWRlLWxlYWYiPjxwYXRoIGQ9Ik0xMSAyMEE3IDcgMCAwIDEgOS44IDYuMUMxNS41IDUgMTcgNC40OCAxOSAyYzEgMiAyIDQuMTggMiA4IDAgNS41LTQuNzggMTAtMTAgMTBaIi8+PHBhdGggZD0iTTIgMjFjMC0zIDEuODUtNS4zNiA1LjA4LTZDOS41IDE0LjUyIDEyIDEzIDEzIDEyIi8+PC9zdmc+" alt="Soin Détente">
+      <h3>Soin Détente</h3>
+      <p>Séance apaisante conçue pour réduire le stress, détendre le corps et l’esprit, relâcher les tensions et favoriser un profond bien-être. Idéal pour un moment de calme et de récupération globale.</p>
     </div>
     <div>
-      <img src="https://lucide.dev/icons/droplet.svg" alt="Hijama">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlNTNlM2UiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1oZWFydC1oYW5kc2hha2UtaWNvbiBsdWNpZGUtaGVhcnQtaGFuZHNoYWtlIj48cGF0aCBkPSJNMTkuNDE0IDE0LjQxNEMyMSAxMi44MjggMjIgMTEuNSAyMiA5LjVhNS41IDUuNSAwIDAgMC05LjU5MS0zLjY3Ni42LjYgMCAwIDEtLjgxOC4wMDFBNS41IDUuNSAwIDAgMCAyIDkuNWMwIDIuMyAxLjUgNCAzIDUuNWw1LjUzNSA1LjM2MmEyIDIgMCAwIDAgMi44NzkuMDUyIDIuMTIgMi4xMiAwIDAgMC0uMDA0LTMgMi4xMjQgMi4xMjQgMCAxIDAgMy0zIDIuMTI0IDIuMTI0IDAgMCAwIDMuMDA0IDAgMiAyIDAgMCAwIDAtMi44MjhsLTEuODgxLTEuODgyYTIuNDEgMi40MSAwIDAgMC0zLjQwOSAwbC0xLjcxIDEuNzFhMiAyIDAgMCAxLTIuODI4IDAgMiAyIDAgMCAxIDAtMi44MjhsMi44MjMtMi43NjIiLz48L3N2Zz4=" alt="Hijama">
       <h3>Hijama</h3>
-      <p>Intégrée dans toutes les séances (30 min ou 1h) selon les besoins, pour un soin ciblé et efficace.</p>
+      <p>Pratiqué dans toutes les séances (30 min ou 1h), selon les besoins.</p>
     </div>
   </div>
 </section>
@@ -291,15 +249,15 @@
   <h2>Nos Tarifs</h2>
   <div class="about-grid">
     <div>
-      <img src="https://lucide.dev/icons/activity.svg" alt="Massage sportif tarif">
-      <h3>Massage sportif</h3>
-      <p class="prix-desc">30 minutes</p>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDFlZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1kdW1iYmVsbC1pY29uIGx1Y2lkZS1kdW1iYmVsbCI+PHBhdGggZD0iTTE3LjU5NiAxMi43NjhhMiAyIDAgMSAwIDIuODI5LTIuODI5bC0xLjc2OC0xLjc2N2EyIDIgMCAwIDAgMi44MjgtMi44MjlsLTIuODI4LTIuODI4YTIgMiAwIDAgMC0yLjgyOSAyLjgyOGwtMS43NjctMS43NjhhMiAyIDAgMSAwLTIuODI5IDIuODI5eiIvPjxwYXRoIGQ9Im0yLjUgMjEuNSAxLjQtMS40Ii8+PHBhdGggZD0ibTIwLjEgMy45IDEuNC0xLjQiLz48cGF0aCBkPSJNNS4zNDMgMjEuNDg1YTIgMiAwIDEgMCAyLjgyOS0yLjgyOGwxLjc2NyAxLjc2OGEyIDIgMCAxIDAgMi44MjktMi44MjlsLTYuMzY0LTYuMzY0YTIgMiAwIDEgMC0yLjgyOSAyLjgyOWwxLjc2OCAxLjc2N2EyIDIgMCAwIDAtMi44MjggMi44Mjl6Ii8+PHBhdGggZD0ibTkuNiAxNC40IDQuOC00LjgiLz48L3N2Zz4=" alt="Massage sportif">
+      <h3>Massage Sportif</h3>
+      <p class="prix-desc">Séance de 30 minutes</p>
       <div class="prix-valeur">60.-</div>
     </div>
     <div>
-      <img src="https://lucide.dev/icons/heart-handshake.svg" alt="Soin détente tarif">
-      <h3>Soin détente</h3>
-      <p class="prix-desc">1 heure</p>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1MWEwMjciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sZWFmLWljb24gbHVjaWRlLWxlYWYiPjxwYXRoIGQ9Ik0xMSAyMEE3IDcgMCAwIDEgOS44IDYuMUMxNS41IDUgMTcgNC40OCAxOSAyYzEgMiAyIDQuMTggMiA4IDAgNS41LTQuNzggMTAtMTAgMTBaIi8+PHBhdGggZD0iTTIgMjFjMC0zIDEuODUtNS4zNiA1LjA4LTZDOS41IDE0LjUyIDEyIDEzIDEzIDEyIi8+PC9zdmc+" alt="Soin Détente">
+      <h3>Massage relaxation</h3>
+      <p class="prix-desc">Séance de 1 heure</p>
       <div class="prix-valeur">100 CHF</div>
     </div>
   </div>
@@ -319,13 +277,9 @@
   </div>
 </section>
 
-<footer>© 2025 Axium.Perform – Coaching & Performance</footer>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("active");
-  }
-</script>
+<footer>
+  © 2025 Axium.Perform – Coaching & Performance
+</footer>
 
 </body>
 </html>
